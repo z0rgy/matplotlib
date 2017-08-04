@@ -779,7 +779,7 @@ class ScalarFormatter(Formatter):
         if np.abs(xp) < 1e-8:
             xp = 0
         if self._useLocale:
-            return locale.format_string(self.format, (xp,))
+            return locale.format_string(self.format, (xp,), True)
         else:
             return self.format % xp
 
